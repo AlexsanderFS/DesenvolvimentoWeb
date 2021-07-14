@@ -1,0 +1,290 @@
+﻿{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Your description">
+    <meta name="author" content="Your name">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+	<meta property="og:site_name" content="" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+
+    <!-- Webpage Title -->
+    <title>Web Avançado</title>
+    
+    <!-- Styles -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/fontawesome-all.css' %}" rel="stylesheet">
+    <link href="{% static 'css/swiper.css" rel="stylesheet' %}">
+	<link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
+	<link href="{% static 'css/styles.css' %}" rel="stylesheet">
+	
+	<!-- Favicon  -->
+    <link rel="icon" href="{% static 'images/favicon.png' %}">
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+        <div class="container">
+            
+            <!-- Text Logo - Use this if you don't have a graphic logo -->
+            <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Kora</a> -->
+
+            <!-- Image Logo -->
+            <a class="navbar-brand logo-image" href="{% url 'index' %}"> BSI - IFNMG </a>
+
+            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#header">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#intro">W3C</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#features">HTML</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#details">CSS</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Outros</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item page-scroll" href="{% url 'javascript' %}">Java Script</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item page-scroll" href="{% url 'frontend' %}">Frameworks Frontend</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item page-scroll" href="{% url 'backend' %}">Frameworks Backend</a>
+                        </div>
+                    </li>
+                </ul>
+                <span class="nav-item">
+                    <a class="btn-solid-sm page-scroll" href="https://onepagelove.com/kora">Baixar</a>
+                </span>
+            </div> <!-- end of navbar-collapse -->
+        </div> <!-- end of container -->
+    </nav> <!-- end of navbar -->
+    <!-- end of navigation -->
+
+
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="text-container">
+                        <h1 class="h1-large">Desenvolvimento Web Avançado</h1>
+                        <p class="p-large">Seu guia rápido de consulta sobre as principais tecnologias de desenvolvimento Web</p>
+                        <!--<a class="btn-solid-lg" href="sign-up.html">Inscreva-se</a>--->
+                        <a class="btn-outline-lg page-scroll" href="#intro">Descubra</a>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-7">
+                    <div class="image-container">
+                        <img class="img-fluid" src="{% static 'images/header.png' %}" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </header> <!-- end of header -->
+    <!-- end of header -->
+
+
+    <!-- Introduction -->
+    <div id="intro" class="basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <img class="img-fluid" src="{% static 'images/introduction.jpg' %}" alt="alternative">
+                </div> <!-- end of col -->
+                <div class="col-lg-5">
+                    <div class="text-container">
+                        <h2>World Wide Web Consortium</h2>
+                        <p>O World Wide Web Consortium (W3C) é a principal organização de padronização da World Wide Web.
+                            Consiste em um consórcio internacional com 450 membros, agrega empresas, órgãos governamentais
+                            e organizações independentes com a finalidade de estabelecer padrões para a criação e a
+                            interpretação de conteúdos para a Web. Foi fundado por Tim Berners-Lee em 1994 para levar a Web
+                            ao seu potencial máximo, por meio do desenvolvimento de protocolos comuns e fóruns abertos que
+                            promovam a sua evolução e assegurem a sua interoperabilidade. Sites desenvolvidos segundo esses
+                            padrões podem ser acessados e visualizados por qualquer pessoa ou tecnologia, independente dos
+                            hardware ou software utilizados, como celulares (em Portugal, telemóveis) e PDAs, de maneira
+                            rápida e compatível com os novos padrões e tecnologias que possam surgir com a evolução da internet.</p>
+                        <!--<a class="btn-solid-reg" href="sign-up.html">Sign up</a>-->
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of introduction -->
+
+
+    <!-- Features -->
+    <div id="features" class="cards-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="h2-heading">HyperText Markup Language (HTML)</h2>
+                    <p class="p-heading">HTML significa: "Linguagem de Marcação de Hipertexto" é uma linguagem de marcação
+                        utilizada na construção de páginas na Web. Documentos HTML podem ser interpretados por navegadores.
+                        A tecnologia é fruto da junção entre os padrões HyTime e SGML. HyTime é um padrão para a representação
+                        estruturada de hipermídia e conteúdo baseado em tempo. Um documento é visto como um conjunto de eventos
+                        concorrentes dependentes de tempo (como áudio, vídeo, etc.), conectados por hiperligações (em inglês:
+                        hyperlink e link). O padrão é independente de outros padrões de processamento de texto em geral.
+                        SGML é um padrão de formatação de textos. Não foi desenvolvido para hipertexto, mas tornou-se conveniente
+                        para transformar documentos em hiper-objetos e para descrever as ligações.</p>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-1 -->
+    <!-- end of features -->
+
+
+    <!-- Details 1 -->
+    <div id="details" class="basic-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="intro">
+                        <h2>Cascading Style Sheets (CSS)</h2>
+                        <p>CSS é um mecanismo para adicionar estilo (cores, fontes, espaçamento, etc.) a um documento web.
+                            O código CSS pode ser aplicado diretamente nas tags ou ficar contido dentro das tags < style >.
+                            Também é possível, em vez de colocar a formatação dentro do documento, criar um link para um arquivo
+                            CSS que contém os estilos. Assim, quando se quiser alterar a aparência dos documentos vinculados a
+                            este arquivo CSS, basta modifica-lo. Com a variação de atualizações dos navegadores, o suporte ao
+                            CSS pode variar. A interpretação dos navegadores pode ser avaliada com o teste Acid2, que se tornou
+                            uma forma base de revelar quão eficiente é o suporte de CSS, fazendo com que a nova versão em
+                            desenvolvimento do Firefox seja totalmente compatível a ele, assim como o Opera já é. O Doctype
+                            informado, ou a ausência dele, determina o quirks mode ou o strict mode, modificando o modo como
+                            o CSS é interpretado e a página desenhada.</p>
+                    </div> <!-- end of intro -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-2 -->
+    <!-- end of details 1 -->
+
+
+    <!-- Newsletter -->
+	<div class="form-1">
+		<div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="h2-heading">Inscreva-se e nos siga</h2>
+                    <p class="p-heading">Faça parte da nossa turma de Web Avançado</p>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    
+                    <!-- Newsletter Form -->
+                    <form>
+                        <div class="form-group mail">
+                            <input type="email" class="form-control-input" id="nemail" required>
+                            <label class="label-control" for="nemail">Email</label>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="form-control-submit-button">Increva-se</button>
+                        </div>
+                        <div class="form-message">
+                            <div id="nmsgSubmit" class="h3 text-center hidden"></div>
+                        </div>
+                    </form>
+                    <!-- end of newsletter form -->
+                    
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of form-1 -->
+    <!-- end of newsletter -->
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-col first">
+                        <h6>Sobre o Site</h6>
+                        <p class="p-small">Template da Kora para desenvolvimento web </p>
+                    </div> <!-- end of footer-col -->
+                    <div class="footer-col second">
+                    </div> <!-- end of footer-col -->
+                    <div class="footer-col third">
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-pinterest-p fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-instagram fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <p class="p-small">Contate-nos <a href="mailto:contact@site.com"><strong>emailficticio@gmail.com</strong></a></p>
+                    </div> <!-- end of footer-col -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->  
+    <!-- end of footer -->
+
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">Copyright © <a href="#your-link">Alexsander</a></p>
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of copyright --> 
+    <!-- end of copyright -->
+    
+    	
+    <!-- Scripts -->
+    <script src="{% static 'js/jquery.min.js' %}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script> <!-- Bootstrap framework -->
+    <script src="{% static 'js/jquery.easing.min.js' %}"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="{% static 'js/jquery.magnific-popup.js' %"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="{% static 'js/swiper.min.js' %}"></script> <!-- Swiper for image and text sliders -->
+    <script src="{% static 'js/scripts.js' %}"></script> <!-- Custom scripts -->
+</body>
+</html>
