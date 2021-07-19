@@ -1,5 +1,5 @@
 from django.urls import path
-from appWeb.views import index, w3c, html, css, javascript, frontend, backend
+from appWeb.views import index, w3c, html, css, javascript, frontend, backend, contato
 
 urlpatterns = [
     path('', index, name="index"),
@@ -9,4 +9,5 @@ urlpatterns = [
     path('javascript', javascript, name="javascript"),
     path('frontend', frontend, name="frontend"),
     path('backend', backend, name="backend"),
+    path('contato', contato, name="contato"),
 ]
